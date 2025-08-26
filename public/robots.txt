@@ -1,5 +1,0 @@
-
-User-agent: *
-Disallow:
-
-Sitemap: https:/first-step-printing-press.app/sitemap.xml
