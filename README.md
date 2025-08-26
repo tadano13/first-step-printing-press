@@ -42,7 +42,7 @@ To run this project locally, follow these steps:
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/your-username/first-step-printing-press.git](https://github.com/your-username/first-step-printing-press.git)
+    git clone https://github.com/your-username/first-step-printing-press.git
     ```
 2.  **Navigate to the project directory:**
     ```bash
