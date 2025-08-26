@@ -44,21 +44,17 @@ To run this project locally, follow these steps:
     ```bash
     git clone https://github.com/your-username/first-step-printing-press.git
     ```
-2.  **Navigate to the project directory:**
-    ```bash
-    cd printing_press_app
-    ```
-3.  **Install dependencies:**
+2.  **Install dependencies:**
     ```bash
     npm install
     ```
-4.  **Create a `.env` file** in the root of the project and add the following variables with your own keys:
+3.  **Create a `.env` file** in the root of the project and add the following variables with your own keys:
     ```
     RAPIDAPI_KEY=your_rapidapi_key
     INSTAGRAM_USERNAME=your_instagram_username
     SENDGRID_API_KEY=your_sendgrid_api_key
     ```
-5.  **Start the server:**
+4.  **Start the server:**
     ```bash
     npm start
     ```
