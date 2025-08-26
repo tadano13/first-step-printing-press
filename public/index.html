@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Step Printing Press - Quality Printing Solutions</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Newsreader -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;1,6..72,300&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-white">
+
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 glass-effect">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold tracking-tighter">
+                First Step <span class="text-accent">Printing</span>
+            </h1>
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#services" class="hover:text-accent transition duration-300">Services</a>
+                <a href="#products" class="hover:text-accent transition duration-300">Products</a>
+                <a href="#our-work" class="hover:text-accent transition duration-300">Our Work</a>
+                <a href="#about" class="hover:text-accent transition duration-300">About Us</a>
+                <a href="#contact" class="bg-accent hover:bg-accent-dark text-white font-semibold px-5 py-2 rounded-lg transition duration-300 shadow-lg">Get a Quote</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <i data-feather="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#services" class="block py-2 hover:text-accent transition duration-300">Services</a>
+            <a href="#products" class="block py-2 hover:text-accent transition duration-300">Products</a>
+            <a href="#our-work" class="block py-2 hover:text-accent transition duration-300">Our Work</a>
+            <a href="#about" class="block py-2 hover:text-accent transition duration-300">About Us</a>
+            <a href="#contact" class="block mt-2 bg-accent hover:bg-accent-dark text-white font-semibold px-5 py-2 rounded-lg transition duration-300 shadow-lg text-center">Get a Quote</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-screen flex items-center justify-center text-center overflow-hidden pt-24">
+            <div class="absolute inset-0 bg-black opacity-50 z-10"></div>
+            <div class="container mx-auto px-6 relative z-20">
+                <h2 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 text-white shadow-lg">Let Your Brand Speak in Print!</h2>
+                <p class="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto mb-8">High-quality, vibrant, and professional printing solutions tailored for your brand. Your first step to making a lasting impression.</p>
+                <a href="#contact" class="bg-white text-gray-900 font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-200 transition duration-300 transform hover:scale-105">Start Your Project</a>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-dark-secondary">
+            <div class="container mx-auto px-6 text-center">
+                <h3 class="text-3xl font-bold mb-2">Our Printing Services</h3>
+                <p class="text-gray-400 mb-12">Click or hover on any card to see the price.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Business Cards -->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="icon-container"><i data-feather="credit-card" class="w-8 h-8 text-white"></i></div>
+                                <h4 class="text-xl font-semibold mb-3">Business Cards</h4>
+                                <p class="text-gray-400">Premium quality cards with various finishes.</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4 class="text-xl font-semibold mb-3">Business Cards</h4>
+                                <p class="text-lg text-gray-400">Starts from</p>
+                                <p class="text-2xl font-bold">₹799</p>
+                                <p class="text-gray-400">per 1000 pieces</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Invitation & Wedding Cards -->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="icon-container"><i data-feather="mail" class="w-8 h-8 text-white"></i></div>
+                                <h4 class="text-xl font-semibold mb-3">Invitation & Wedding Cards</h4>
+                                <p class="text-gray-400">Elegant designs for your special events.</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4 class="text-xl font-semibold mb-3">Pricing</h4>
+                                <p class="text-lg text-gray-400">Starts from</p>
+                                <p class="text-lg">Invitation: <span class="font-bold">₹10</span> / card</p>
+                                <p class="text-lg">Wedding: <span class="font-bold">₹5</span> / card</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Banners -->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="icon-container"><i data-feather="image" class="w-8 h-8 text-white"></i></div>
+                                <h4 class="text-xl font-semibold mb-3">Banners</h4>
+                                <p class="text-gray-400">Large format printing for events and promotions.</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4 class="text-xl font-semibold mb-3">Banners</h4>
+                                <p class="text-lg text-gray-400">Starts from</p>
+                                <p class="text-2xl font-bold">₹30</p>
+                                <p class="text-gray-400">per foot</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Stationery -->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="icon-container"><i data-feather="book-open" class="w-8 h-8 text-white"></i></div>
+                                <h4 class="text-xl font-semibold mb-3">Office Stationery</h4>
+                                <p class="text-gray-400">Custom bill books, letterheads, and envelopes.</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4 class="text-xl font-semibold mb-3">Stationery Pricing</h4>
+                                <p class="text-lg text-gray-400">Starts from</p>
+                                <p>Bill Book: <span class="font-bold">₹100</span> / book</p>
+                                <p>Letter Head: <span class="font-bold">₹4</span> / pcs</p>
+                                <p>Envelopes: <span class="font-bold">₹3</span> / pcs</p>
+                                <p>Window Env: <span class="font-bold">₹5</span> / pcs</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Marketing Materials -->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="icon-container"><i data-feather="shopping-cart" class="w-8 h-8 text-white"></i></div>
+                                <h4 class="text-xl font-semibold mb-3">Marketing Materials</h4>
+                                <p class="text-gray-400">Stickers, leaflets, lottery books, and stamps.</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4 class="text-xl font-semibold mb-3">Marketing Pricing</h4>
+                                <p class="text-lg text-gray-400">Starts from</p>
+                                <p>Leaflet: <span class="font-bold">₹2</span> / pcs</p>
+                                <p>Stickers: <span class="font-bold">₹20</span> / sticker</p>
+                                <p>Lottery: <span class="font-bold">₹14</span> / book (bulk)</p>
+                                <p>Stamps: <span class="font-bold">₹250</span> / stamp</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Menu Cards -->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="icon-container"><i data-feather="menu" class="w-8 h-8 text-white"></i></div>
+                                <h4 class="text-xl font-semibold mb-3">Menu Cards</h4>
+                                <p class="text-gray-400">Durable and stylish menus for your restaurant.</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4 class="text-xl font-semibold mb-3">Menu Cards</h4>
+                                <p class="text-lg text-gray-400">Starts from</p>
+                                <p class="text-2xl font-bold">₹150</p>
+                                <p class="text-gray-400">per card</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="py-20 bg-dark">
+            <div class="container mx-auto px-6 text-center">
+                <h3 class="text-3xl font-bold mb-2">Custom Apparel & More</h3>
+                <p class="text-gray-400 mb-12">Personalize your brand with our high-quality custom printing on a variety of items.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                    <!-- T-Shirts -->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="icon-container"><i data-feather="figma" class="w-8 h-8 text-white"></i></div>
+                                <h4 class="text-xl font-semibold mb-3">T-Shirts</h4>
+                                <p class="text-gray-400">Custom prints for your team, event, or brand.</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4 class="text-xl font-semibold mb-3">T-Shirt Printing</h4>
+                                <p class="text-lg text-gray-400">Starts from</p>
+                                <p class="text-2xl font-bold">₹20</p>
+                                <p class="text-gray-400">per print (bulk order)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Event Props -->
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="icon-container"><i data-feather="gift" class="w-8 h-8 text-white"></i></div>
+                                <h4 class="text-xl font-semibold mb-3">Event Props & Brooches</h4>
+                                <p class="text-gray-400">For baby showers, parties, and any event.</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h4 class="text-xl font-semibold mb-3">Event Props</h4>
+                                <p class="text-lg text-gray-400">Starts from</p>
+                                <p>Brooches: <span class="font-bold">₹10</span> / pcs</p>
+                                <p>Props: <span class="font-bold">₹10</span> / pcs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Work Section (Instagram Feed) -->
+        <section id="our-work" class="py-20 bg-dark-secondary">
+            <div class="container mx-auto px-6 text-center">
+                <h3 class="text-3xl font-bold mb-2">Our Work on Instagram</h3>
+                <p class="text-gray-400 mb-12">Follow us <a href="https://www.instagram.com/first_step_printing_press" target="_blank" class="text-accent hover:text-accent transition duration-300">@firststep_printing</a> for our latest projects.</p>
+                <div id="instagram-feed" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <p id="feed-loading-message" class="text-gray-500 col-span-full">Loading our latest work from Instagram...</p>
+                </div>
+                <!-- Load More Button Container -->
+                <div id="load-more-container" class="mt-12 text-center">
+                    <button id="load-more-btn" class="bg-accent hover:bg-accent-dark text-white font-semibold px-6 py-3 rounded-lg transition duration-300 shadow-lg hidden">Load More</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-20 bg-dark">
+             <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="images/image.jpg" alt="The First Step Printing Press Team" class="rounded-xl shadow-2xl">
+                </div>
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h3 class="text-3xl font-bold mb-4">About First Step Printing</h3>
+                    <p class="text-gray-400 mb-4">we have been the trusted partner for businesses and individuals seeking high-quality printing services. Our commitment to excellence, cutting-edge technology, and customer satisfaction has made us a leader in the industry.</p>
+                    <p class="text-gray-400">We believe that every print tells a story, and we're here to help you tell yours beautifully.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-dark-secondary">
+            <div class="container mx-auto px-6 text-center">
+                <h3 class="text-3xl font-bold mb-2">Get in Touch</h3>
+                <p class="text-gray-400 mb-12">Have a project in mind? Let's talk!</p>
+                <div class="max-w-xl mx-auto bg-dark p-8 rounded-xl shadow-2xl">
+                    <form id="contact-form">
+                        <div class="mb-4"><input type="text" id="name" name="name" placeholder="Your Name" class="w-full p-3 bg-gray-700 rounded-lg border border-gray-600 focus:outline-none focus:border-accent" required></div>
+                        <div class="mb-4"><input type="email" id="email" name="email" placeholder="Your Email" class="w-full p-3 bg-gray-700 rounded-lg border border-gray-600 focus:outline-none focus:border-accent" required></div>
+                        <div class="mb-4"><textarea id="message" name="message" placeholder="Your Message" rows="5" class="w-full p-3 bg-gray-700 rounded-lg border border-gray-600 focus:outline-none focus:border-accent" required></textarea></div>
+                        <button type="submit" class="w-full bg-accent hover:bg-accent-dark text-white font-bold py-3 px-6 rounded-lg transition duration-300">Send Message</button>
+                    </form>
+                    <div id="form-status" class="mt-4 text-center"></div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- WhatsApp Chat Button -->
+        <a href="https://ig.me/m/first_step_printing_press" target="_blank" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg z-50 transition duration-300 transform hover:scale-110">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-message-circle"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+        </a>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark py-8">
+        <div class="container mx-auto px-6 text-center text-gray-500">
+            <p>&copy; 2024 First Step Printing Press. All Rights Reserved.</p>
+            <div class="flex justify-center space-x-4 mt-4">
+                <a href="https://www.instagram.com/first_step_printing_press" class="hover:text-white"><i data-feather="instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
