@@ -19,15 +19,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-// --- NEW TEST ROUTE ---
-// This route is for debugging only. It helps us see if the server is running.
 app.get('/api/test', (req, res) => {
     console.log('Test route was hit!');
     res.status(200).json({ message: 'Success! The server is running correctly.' });
 });
 
-
-// --- REGULAR API ROUTES ---
 
 app.get('/api/instagram', async (req, res) => {
     const rapidApiKey = process.env.RAPIDAPI_KEY;
@@ -107,3 +103,4 @@ app.post('/api/contact', async (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
+
