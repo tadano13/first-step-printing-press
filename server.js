@@ -1,35 +1,34 @@
 // server.js
 
-// Import necessary packages
 const express = require('express');
 const axios = require('axios');
-const sgMail = require('@sendgrid/mail'); // Import SendGrid
+const sgMail = require('@sendgrid/mail');
 const path = require('path');
 const cors = require('cors');
 
-// Load environment variables from .env file
 require('dotenv').config();
 
-// Initialize the Express app
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Set the SendGrid API Key
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
-// --- Middleware ---
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-// --- API ROUTES ---
+// --- NEW TEST ROUTE ---
+// This route is for debugging only. It helps us see if the server is running.
+app.get('/api/test', (req, res) => {
+    console.log('Test route was hit!');
+    res.status(200).json({ message: 'Success! The server is running correctly.' });
+});
 
-/**
- * @route   GET /api/instagram
- * @desc    Securely fetches the latest Instagram posts using the Social Lens API.
- */
+
+// --- REGULAR API ROUTES ---
+
 app.get('/api/instagram', async (req, res) => {
     const rapidApiKey = process.env.RAPIDAPI_KEY;
     const instagramUsername = process.env.INSTAGRAM_USERNAME;
@@ -75,10 +74,6 @@ app.get('/api/instagram', async (req, res) => {
     }
 });
 
-/**
- * @route   POST /api/contact
- * @desc    Handles contact form submission and sends an email using SendGrid.
- */
 app.post('/api/contact', async (req, res) => {
     const { name, email, message } = req.body;
 
@@ -86,20 +81,13 @@ app.post('/api/contact', async (req, res) => {
         return res.status(400).json({ error: 'All fields are required.' });
     }
 
-    // You must verify a "Single Sender" email address in your SendGrid account.
-    // This will be the "from" address.
-    const verifiedSenderEmail = 'firststepprinting0@gmail.com'; 
+    const verifiedSenderEmail = 'your-verified-email@example.com'; 
 
     const msg = {
-        to: verifiedSenderEmail, // The email that receives the notification
-        from: verifiedSenderEmail, // Your verified sender email
+        to: verifiedSenderEmail,
+        from: verifiedSenderEmail,
         subject: `New Contact Form Message from ${name}`,
         text: `You have a new message from your website.\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
-        html: `<p>You have a new message from your website.</p>
-               <p><strong>Name:</strong> ${name}</p>
-               <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
-               <p><strong>Message:</strong></p>
-               <p>${message}</p>`,
     };
 
     try {
@@ -116,7 +104,6 @@ app.post('/api/contact', async (req, res) => {
 });
 
 
-// --- Start the Server ---
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
