@@ -3,7 +3,7 @@
 This is the official web application for the First Step Printing Press, a modern, responsive portfolio website designed to showcase our wide range of printing services and products.
 
 ## Description
-
+    
 This project is a full-stack web application built with a Node.js backend and a static HTML, CSS, and JavaScript frontend. It features a dynamic, animated design, a live Instagram feed to display our latest work, and a fully functional contact form for customer inquiries.
 
 The primary goal of this website is to provide an engaging and user-friendly experience for potential clients, highlighting our services from business cards and stationery to custom apparel and event props.
