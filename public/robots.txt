@@ -2,4 +2,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://first-step-printing-press.vercel.app/sitemap.xml
+Sitemap: https://first-step-printing-press.vercel.app/sitemap.xml/
