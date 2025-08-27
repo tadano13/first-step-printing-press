@@ -51,24 +51,17 @@ app.get('/api/instagram', async (req, res) => {
         const formattedPosts = postsData.map(post => {
             let imageUrl = null;
 
-            // First, try to get the best quality image from the main post object
-            if (post.image_versions && post.image_versions.items && post.image_versions.items.length > 0) {
-                imageUrl = post.image_versions.items[0].url;
-            }
-
-            // If that fails, try the main thumbnail URL
-            if (!imageUrl && post.thumbnail_url) {
-                imageUrl = post.thumbnail_url;
-            }
-
-            // As a last resort for carousels, check the first item inside it
-            if (!imageUrl && post.carousel_media && post.carousel_media.length > 0) {
+            if (post.media_type === 8 && post.carousel_media && post.carousel_media.length > 0) {
                 const firstItem = post.carousel_media[0];
-                if (firstItem.image_versions && firstItem.image_versions.items.length > 0) {
+                if (firstItem.image_versions && firstItem.image_versions.items && firstItem.image_versions.items.length > 0) {
                     imageUrl = firstItem.image_versions.items[0].url;
-                } else if (firstItem.thumbnail_url) {
+                } else {
                     imageUrl = firstItem.thumbnail_url;
                 }
+            } else if (post.image_versions && post.image_versions.items && post.image_versions.items.length > 0) {
+                imageUrl = post.image_versions.items[0].url;
+            } else {
+                imageUrl = post.thumbnail_url;
             }
 
             const permalink = `https://www.instagram.com/p/${post.code}/`;
